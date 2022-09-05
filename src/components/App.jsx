@@ -30,7 +30,7 @@ function App() {
     if (todoItems) setItems(todoItems)
   }, [])
 
-  // saving the items in browser storage to prevent loss of todos on refreshing tab
+  // saving the items array in local storage to prevent loss of items on refreshing tab
   useEffect(() => {
     localStorage.setItem('lists', JSON.stringify(items))
   }, [items])
